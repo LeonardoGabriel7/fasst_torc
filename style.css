@@ -1,6 +1,11 @@
-/* Google Fonts */
+/* =============================================== */
+/* FONTES E RESET GLOBAL */
+/* =============================================== */
+
+/* Importação da fonte do Google */
 @import url('https://fonts.googleapis.com/css2?family=Oswald:wght@500;700&display=swap');
 
+/* Reset básico */
 * {
   margin: 0;
   padding: 0;
@@ -9,8 +14,13 @@
 
 body {
   font-family: 'Oswald', sans-serif;
-  scroll-behavior: smooth; /* Rolagem suave */
+  scroll-behavior: smooth;
 }
+
+
+/* =============================================== */
+/* HEADER / NAVEGAÇÃO */
+/* =============================================== */
 
 header {
   width: 100%;
@@ -52,6 +62,7 @@ header {
   font-size: 1rem;
   position: relative;
   transition: color 0.3s ease;
+  white-space: nowrap;
 }
 
 .nav-links li a::after {
@@ -73,7 +84,7 @@ header {
   width: 100%;
 }
 
-/* Hambúrguer */
+/* Menu Hambúrguer */
 .hamburger {
   display: none;
   flex-direction: column;
@@ -90,7 +101,7 @@ header {
   transition: all 0.3s ease;
 }
 
-/* Animação hambúrguer para X */
+/* Animação do hambúrguer para X */
 .hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -103,7 +114,7 @@ header {
   transform: rotate(-45deg) translate(5px, -5px);
 }
 
-/* Responsivo */
+/* Responsivo - Header */
 @media (max-width: 768px) {
   .nav-links {
     position: absolute;
@@ -127,17 +138,15 @@ header {
 }
 
 
-
-
-
-
-
+/* =============================================== */
+/* SLIDER / BANNER PRINCIPAL */
+/* =============================================== */
 
 .slider {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: calc(60vh + 40px); /* aumento de 40px */
+  height: calc(60vh + 40px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -160,7 +169,7 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px; /* espaço entre texto e imagem */
+  gap: 40px;
   opacity: 0;
   transition: opacity 0.8s ease;
   z-index: 2;
@@ -176,23 +185,23 @@ header {
 }
 
 .content h1 {
-  font-size: 3.5rem; /* maior */
+  font-size: 3.5rem;
   margin: 0;
 }
 
 .content p {
-  font-size: 1.7rem; /* maior */
+  font-size: 1.7rem;
   margin-top: 0.5rem;
 }
 
 .image img {
-  width: 450px; /* maior */
+  width: 450px;
   height: auto;
   transition: transform 0.8s ease, opacity 0.8s ease;
-  transform-origin: center right; /* para girar de lado */
+  transform-origin: center right;
 }
 
-/* Botões */
+/* Botões de navegação do slider */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -210,18 +219,13 @@ header {
 .next { right: 20px; }
 
 
-
-
-
-
-
-
-
-
+/* =============================================== */
+/* SEÇÃO DE SERVIÇOS */
+/* =============================================== */
 
 .servicos {
   padding: 60px 20px;
-  background: #474B4F;
+  background: #000;
 }
 
 .servicos h2 {
@@ -281,7 +285,7 @@ header {
   font-size: 1.2rem;
 }
 
-/* Efeito hover */
+/* Efeitos hover */
 .card:hover {
   transform: translateY(-10px);
   box-shadow: 0 8px 20px rgba(0,0,0,0.5);
@@ -292,132 +296,83 @@ header {
 }
 
 
+/* =============================================== */
+/* SEÇÃO SOBRE NÓS */
+/* =============================================== */
+
+.sobre {
+  padding: 80px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.logo-box img {
+  max-width: 100%;
+  height: auto;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(240, 125, 0, 0.4);
+}
+
+.descricao h3 {
+  font-size: 2rem;
+  color: #F07D00;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.descricao .subtitle {
+  font-size: 1.2rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.descricao p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+}
+
+.descricao strong {
+  color: #F07D00;
+}
+
+/* Responsivo - Sobre */
+@media (max-width: 768px) {
+  .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logo-box {
+    order: 1;
+  }
+
+  .descricao {
+    order: 2;
+  }
+
+  .logo-box img {
+    max-width: 60%;
+    margin: 0 auto;
+  }
+}
 
 
+/* =============================================== */
+/* SEÇÃO MÃO DE OBRA */
+/* =============================================== */
 
-
-
-
-
-
-
- .sobre {
-            padding: 80px 20px;
-            background: #000;
-            color: #fff;
-        }
-
-        .container {
-            max-width: 1200px;
-            margin: 0 auto;
-            display: grid;
-            grid-template-columns: 1fr 1.2fr;
-            gap: 40px;
-            align-items: center;
-        }
-
-        .texto h2 {
-            font-size: 2.5rem;
-            color: #F07D00;
-            line-height: 1.3;
-            margin-bottom: 30px;
-            font-weight: 700;
-        }
-
-        .btn {
-            display: inline-flex;
-            align-items: center;
-            gap: 12px;
-            padding: 15px 30px;
-            background: #F07D00;
-            color: #fff;
-            border-radius: 50px;
-            text-decoration: none;
-            font-weight: bold;
-            font-size: 1.1rem;
-            transition: all 0.3s ease;
-            text-transform: uppercase;
-            animation: pulse 2s infinite;
-        }
-
-        @keyframes pulse {
-            0%, 100% {
-                transform: scale(1);
-                box-shadow: 0 0 0 0 rgba(240, 125, 0, 0.4);
-            }
-            50% {
-                transform: scale(1.05);
-                box-shadow: 0 0 0 10px rgba(240, 125, 0, 0);
-            }
-        }
-
-        .btn i {
-            font-size: 1.2rem;
-            transition: transform 0.3s ease;
-        }
-
-        .btn:hover {
-            background: #ff8c00;
-            transform: scale(1.05);
-        }
-
-        .btn:hover i {
-            transform: rotate(-10deg) scale(1.2);
-        }
-
-        .descricao h3 {
-            font-size: 2rem;
-            color: #F07D00;
-            margin-bottom: 15px;
-            font-weight: 700;
-        }
-
-        .descricao .subtitle {
-            font-size: 1.2rem;
-            color: #ff8c00;
-            margin-bottom: 20px;
-            font-style: italic;
-        }
-
-        .descricao p {
-            font-size: 1.1rem;
-            line-height: 1.7;
-            margin-bottom: 18px;
-            color: #e0e0e0;
-        }
-
-        .descricao strong {
-            color: #F07D00;
-        }
-
-        /* Responsivo */
-        @media (max-width: 768px) {
-            .sobre {
-                padding: 60px 20px;
-            }
-
-            .container {
-                grid-template-columns: 1fr;
-                gap: 25px;
-                text-align: center;
-            }
-
-            .texto h2 {
-                font-size: 2rem;
-            }
-
-            .descricao h3 {
-                font-size: 1.6rem;
-            }
-
-            .btn {
-                justify-content: center;
-            }
-        }
-
-
-
-/* Seção Mão de Obra no estilo da Emergencial */
 .mao-obra {
   background: #000;
   color: #fff;
@@ -508,7 +463,11 @@ header {
   box-shadow: 0 8px 20px rgba(240, 125, 0, 0.4);
 }
 
-/* Atendimento Emergencial */
+
+/* =============================================== */
+/* SEÇÃO ATENDIMENTO EMERGENCIAL */
+/* =============================================== */
+
 .emergencial-section {
   background: #000;
   color: #fff;
@@ -606,7 +565,7 @@ header {
   transform: rotate(-10deg) scale(1.2);
 }
 
-/* Responsivo */
+/* Responsivo - Mão de Obra e Emergencial */
 @media (max-width: 768px) {
   .mao-obra-container,
   .emergencial-container {
@@ -630,32 +589,11 @@ header {
   }
 }
 
-/* Animações */
-@keyframes pulse {
-  0% {
-    box-shadow: 0 0 0 0 rgba(240, 125, 0, 0.5);
-  }
-  70% {
-    box-shadow: 0 0 0 15px rgba(240, 125, 0, 0);
-  }
-  100% {
-    box-shadow: 0 0 0 0 rgba(240, 125, 0, 0);
-  }
-}
 
-@keyframes fadeInUp {
-  from {
-    opacity: 0;
-    transform: translateY(40px);
-  }
-  to {
-    opacity: 1;
-    transform: translateY(0);
-  }
-}
+/* =============================================== */
+/* SEÇÃO ONDE ESTAMOS / LOCALIZAÇÃO */
+/* =============================================== */
 
-
-/* Onde Estamos */
 .onde-estamos-section {
   background: #000;
   color: #fff;
@@ -699,7 +637,7 @@ header {
   transform: scale(1.05);
 }
 
-/* Responsivo */
+/* Responsivo - Localização */
 @media (max-width: 768px) {
   .onde-estamos-header h2 {
     font-size: 2rem;
@@ -711,172 +649,193 @@ header {
 }
 
 
+/* =============================================== */
+/* RODAPÉ */
+/* =============================================== */
 
-
-/* Reset para remover espaços em branco */
-* {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+.site-footer {
+  background: #000;
+  color: #fff;
+  padding: 60px 20px 30px;
+  border-top: 3px solid #F07D00;
+  margin-top: 0;
+  font-family: Arial, sans-serif;
 }
 
-/* Remover margens do body e html */
-html, body {
-  margin: 0;
-  padding: 0;
+.footer-container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: flex;
+  flex-wrap: wrap;
+  gap: 40px;
+  justify-content: space-between;
 }
 
-/* Rodapé Principal */ 
-.site-footer {   
-  background: #000;   
-  color: #fff;   
-  padding: 60px 20px 30px;   
-  border-top: 3px solid #F07D00;   
-  margin-top: 0; /* Alterado de 80px para 0 */
-  font-family: Arial, sans-serif; 
-}  
-
-.footer-container {   
-  max-width: 1200px;   
-  margin: 0 auto;   
-  display: flex;   
-  flex-wrap: wrap;   
-  gap: 40px;   
-  justify-content: space-between; 
-}  
-
-.footer-brand {   
-  flex: 1 1 250px; 
-}  
-
-.footer-brand h2 {   
-  font-size: 1.8rem;   
-  margin-bottom: 10px;   
-  color: #F07D00; 
-}  
-
-.footer-brand p {   
-  font-size: 1rem;   
-  color: #ccc; 
-}  
-
-/* Voltar ao topo */ 
-.footer-backtotop {   
-  flex: 1 1 200px;   
-  text-align: center; 
-}  
-
-.footer-backtotop h3 {   
-  margin-bottom: 15px;   
-  font-size: 1.2rem;   
-  color: #F07D00; 
-}  
-
-.btn-backtotop {   
-  display: inline-flex;   
-  align-items: center;   
-  gap: 10px;   
-  padding: 12px 25px;   
-  background: #F07D00;   
-  color: #fff;   
-  border-radius: 30px;   
-  font-weight: bold;   
-  font-size: 1rem;   
-  text-decoration: none;   
-  transition: background 0.3s, transform 0.3s; 
-}  
-
-.btn-backtotop:hover {   
-  background: #ff8c00;   
-  transform: scale(1.05); 
-}  
-
-/* Contato */ 
-.footer-contact {   
-  flex: 1 1 200px; 
-}  
-
-.footer-contact h3 {   
-  font-size: 1.2rem;   
-  color: #F07D00;   
-  margin-bottom: 15px; 
-}  
-
-.footer-contact p {   
-  font-size: 1rem;   
-  color: #ccc;   
-  margin-bottom: 10px; 
-}  
-
-.footer-contact i {   
-  margin-right: 8px; 
-}  
-
-/* Redes Sociais */ 
-.footer-social {   
-  flex: 1 1 200px; 
-}  
-
-.footer-social h3 {   
-  font-size: 1.2rem;   
-  color: #F07D00;   
-  margin-bottom: 15px; 
-}  
-
-.social-icons a {   
-  color: #fff;   
-  font-size: 1.4rem;   
-  margin-right: 15px;   
-  transition: color 0.3s; 
-}  
-
-.social-icons a:hover {   
-  color: #ff8c00; 
-}  
-
-/* Rodapé Inferior */ 
-.footer-bottom {   
-  text-align: center;   
-  margin-top: 40px;   
-  border-top: 1px solid #333;   
-  padding-top: 20px;   
-  font-size: 0.85rem;   
-  color: #888; 
-}  
-
-.footer-bottom a {   
-  color: #F07D00;   
-  text-decoration: none;   
-  font-weight: bold;   
-  transition: color 0.3s; 
-}  
-
-.footer-bottom a:hover {   
-  color: #ff8c00; 
-}  
-
-/* Scroll suave */ 
-html {   
-  scroll-behavior: smooth; 
-}  
-
-/* Responsivo */ 
-@media (max-width: 768px) {   
-  .footer-container {     
-    flex-direction: column;     
-    align-items: center;     
-    text-align: center;   
-  }    
-
-  .footer-brand,   
-  .footer-contact,   
-  .footer-social,   
-  .footer-backtotop {     
-    flex: 1 1 100%;     
-    margin-bottom: 30px;   
-  }    
-
-  .social-icons a {     
-    margin: 0 10px;   
-  } 
+.footer-brand {
+  flex: 1 1 250px;
 }
+
+.footer-brand h2 {
+  font-size: 1.8rem;
+  margin-bottom: 10px;
+  color: #F07D00;
+}
+
+.footer-brand p {
+  font-size: 1rem;
+  color: #ccc;
+}
+
+/* Voltar ao topo */
+.footer-backtotop {
+  flex: 1 1 200px;
+  text-align: center;
+}
+
+.footer-backtotop h3 {
+  margin-bottom: 15px;
+  font-size: 1.2rem;
+  color: #F07D00;
+}
+
+.btn-backtotop {
+  display: inline-flex;
+  align-items: center;
+  gap: 10px;
+  padding: 12px 25px;
+  background: #F07D00;
+  color: #fff;
+  border-radius: 30px;
+  font-weight: bold;
+  font-size: 1rem;
+  text-decoration: none;
+  transition: background 0.3s, transform 0.3s;
+}
+
+.btn-backtotop:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* Contato */
+.footer-contact {
+  flex: 1 1 200px;
+}
+
+.footer-contact h3 {
+  font-size: 1.2rem;
+  color: #F07D00;
+  margin-bottom: 15px;
+}
+
+.footer-contact p {
+  font-size: 1rem;
+  color: #ccc;
+  margin-bottom: 10px;
+}
+
+.footer-contact i {
+  margin-right: 8px;
+}
+
+/* Redes Sociais */
+.footer-social {
+  flex: 1 1 200px;
+}
+
+.footer-social h3 {
+  font-size: 1.2rem;
+  color: #F07D00;
+  margin-bottom: 15px;
+}
+
+.social-icons a {
+  color: #fff;
+  font-size: 1.4rem;
+  margin-right: 15px;
+  transition: color 0.3s;
+}
+
+.social-icons a:hover {
+  color: #ff8c00;
+}
+
+/* Rodapé Inferior */
+.footer-bottom {
+  text-align: center;
+  margin-top: 40px;
+  border-top: 1px solid #333;
+  padding-top: 20px;
+  font-size: 0.85rem;
+  color: #888;
+}
+
+.footer-bottom a {
+  color: #F07D00;
+  text-decoration: none;
+  font-weight: bold;
+  transition: color 0.3s;
+}
+
+.footer-bottom a:hover {
+  color: #ff8c00;
+}
+
+/* Responsivo - Footer */
+@media (max-width: 768px) {
+  .footer-container {
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+  }
+
+  .footer-brand,
+  .footer-contact,
+  .footer-social,
+  .footer-backtotop {
+    flex: 1 1 100%;
+    margin-bottom: 30px;
+  }
+
+  .social-icons a {
+    margin: 0 10px;
+  }
+}
+
+
+/* =============================================== */
+/* ANIMAÇÕES GLOBAIS */
+/* =============================================== */
+
+@keyframes pulse {
+  0% {
+    box-shadow: 0 0 0 0 rgba(240, 125, 0, 0.5);
+  }
+  70% {
+    box-shadow: 0 0 0 15px rgba(240, 125, 0, 0);
+  }
+  100% {
+    box-shadow: 0 0 0 0 rgba(240, 125, 0, 0);
+  }
+}
+
+@keyframes fadeInUp {
+  from {
+    opacity: 0;
+    transform: translateY(40px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+
+
+
+
+
+
+
+
+
