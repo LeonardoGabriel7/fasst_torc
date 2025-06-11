@@ -142,15 +142,18 @@ header {
 /* SLIDER / BANNER PRINCIPAL */
 /* =============================================== */
 
+/* CSS - Estilo do Slider */
+
+/* Slider com fundo escuro tecnológico */
 .slider {
   position: relative;
   overflow: hidden;
   width: 100%;
-  height: calc(60vh + 40px);
+  height: 630px;
   display: flex;
   align-items: center;
   justify-content: center;
-  background: linear-gradient(135deg, #222 0%, #000 100%);
+  background: linear-gradient(135deg, #0d0d0d 0%, #000000 100%);
 }
 
 .slider::before {
@@ -158,7 +161,7 @@ header {
   position: absolute;
   width: 100%;
   height: 100%;
-  background: rgba(0,0,0,0.3);
+  background: rgba(0, 0, 0, 0.4);
   z-index: 1;
 }
 
@@ -169,7 +172,6 @@ header {
   display: flex;
   justify-content: center;
   align-items: center;
-  gap: 40px;
   opacity: 0;
   transition: opacity 0.8s ease;
   z-index: 2;
@@ -182,6 +184,7 @@ header {
 .content {
   color: #fff;
   text-align: center;
+  flex: 1;
 }
 
 .content h1 {
@@ -194,14 +197,23 @@ header {
   margin-top: 0.5rem;
 }
 
+.image {
+  flex: 1;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-top: 40px; /* ↓ ajusta a altura da imagem */
+}
+
 .image img {
   width: 450px;
   height: auto;
-  transition: transform 0.8s ease, opacity 0.8s ease;
-  transform-origin: center right;
+  transition: transform 1s ease, opacity 0.8s ease;
+  transform-origin: center;
+  opacity: 1;
 }
 
-/* Botões de navegação do slider */
+/* Navegação */
 .prev, .next {
   position: absolute;
   top: 50%;
@@ -297,6 +309,90 @@ header {
 
 
 /* =============================================== */
+/* PRODUTOS */
+/* =============================================== */
+
+
+
+
+
+ .produtos-section2 {
+      padding: 40px 20px;
+      text-align: center;
+      background-color: #000;
+      color: #fff;
+
+    }
+
+    .produtos-section2 h2 {
+      color: orange;
+      font-size: 2.5rem;
+      margin-bottom: 30px;
+    }
+
+    .hr-laranja {
+      border: none;
+      height: 2px;
+      background-color: orange;
+      margin: 20px auto;
+      width: 80%;
+    }
+
+    .maquinas {
+      display: flex;
+      flex-wrap: wrap;
+      justify-content: center;
+      gap: 35px;
+      max-width: 1200px;
+      margin: 0 auto 40px;
+    }
+
+    .maquina {
+      background-color: #111;
+      border: 2px solid orange;
+      border-radius: 10px;
+      width: 22%;
+      padding: 15px;
+      box-shadow: 0 0 15px rgba(255, 140, 0, 0.5);
+      transition: transform 0.3s ease, box-shadow 0.3s ease;
+    }
+
+    .maquina:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 20px rgba(255, 165, 0, 0.8);
+    }
+
+    .maquina img {
+      max-width: 100%;
+      border-radius: 6px;
+    }
+
+    .maquina h3 {
+      margin-top: 10px;
+      color: orange;
+      font-size: 1.1rem;
+    }
+
+    
+
+
+    @media (max-width: 900px) {
+      .maquina {
+        width: 45%;
+      }
+    }
+
+    @media (max-width: 600px) {
+      .maquina {
+        width: 100%;
+      }
+    }
+
+
+
+
+
+/* =============================================== */
 /* SEÇÃO SOBRE NÓS */
 /* =============================================== */
 
@@ -377,8 +473,6 @@ header {
   background: #000;
   color: #fff;
   padding: 80px 20px;
-  border-top: 3px solid #F07D00;
-  border-bottom: 3px solid #F07D00;
   animation: fadeInUp 1s ease both;
 }
 
@@ -472,8 +566,6 @@ header {
   background: #000;
   color: #fff;
   padding: 80px 20px;
-  border-top: 3px solid #F07D00;
-  border-bottom: 3px solid #F07D00;
   animation: fadeInUp 1s ease both;
 }
 
@@ -598,7 +690,6 @@ header {
   background: #000;
   color: #fff;
   padding: 80px 20px;
-  border-top: 3px solid #F07D00;
   border-bottom: 3px solid #F07D00;
   text-align: center;
 }
@@ -657,7 +748,6 @@ header {
   background: #000;
   color: #fff;
   padding: 60px 20px 30px;
-  border-top: 3px solid #F07D00;
   margin-top: 0;
   font-family: Arial, sans-serif;
 }
@@ -834,6 +924,13 @@ header {
 
 
 
+.hr-laranja {
+  border: none;
+  height: 3px;              /* Mais fino */
+  background-color: #F07D00; /* Cor sólida */
+  margin: 0;                /* Remove o espaço em branco */
+  width: 100%;              /* Linha completa */
+}
 
 
 

@@ -24,6 +24,8 @@ navItems.forEach(item => {
 
 
 
+
+
 const slides = document.querySelectorAll('.slide');
 const next = document.querySelector('.next');
 const prev = document.querySelector('.prev');
@@ -34,7 +36,7 @@ function showSlide(index) {
   slides.forEach((slide, i) => {
     slide.classList.remove('active');
     const img = slide.querySelector('img');
-    img.style.transform = 'rotateY(0deg) scale(1)';
+    img.style.transform = 'rotateY(0deg)';
     img.style.opacity = '1';
 
     if (i === index) {
@@ -43,14 +45,14 @@ function showSlide(index) {
   });
 }
 
-function transitionImage(slide, direction = 1) {
+function transitionImage(slide) {
   const img = slide.querySelector('img');
-  img.style.transform = `rotateY(${360 * direction}deg) scale(0.8)`;
+  img.style.transform = 'rotateY(360deg)';
   img.style.opacity = '0';
 }
 
 function nextSlide() {
-  transitionImage(slides[current], 1);
+  transitionImage(slides[current]);
 
   setTimeout(() => {
     current = (current + 1) % slides.length;
@@ -59,7 +61,7 @@ function nextSlide() {
 }
 
 function prevSlide() {
-  transitionImage(slides[current], -1);
+  transitionImage(slides[current]);
 
   setTimeout(() => {
     current = (current - 1 + slides.length) % slides.length;
