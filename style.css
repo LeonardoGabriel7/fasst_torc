@@ -141,6 +141,7 @@ header {
 /* =============================================== */
 /* SLIDER / BANNER PRINCIPAL */
 /* =============================================== */
+/* CSS - Estilo do Slider */
 
 /* CSS - Estilo do Slider */
 
@@ -165,6 +166,30 @@ header {
   z-index: 1;
 }
 
+/* Grade animada */
+.slider::after {
+  content: "";
+  position: absolute;
+  top: 0; left: 0;
+  width: 100%;
+  height: 100%;
+  background-image:
+    linear-gradient(rgba(255, 140, 0, 0.05) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(255, 140, 0, 0.05) 1px, transparent 1px);
+  background-size: 50px 50px;
+  z-index: 0;
+  animation: gridMove 25s linear infinite;
+}
+
+@keyframes gridMove {
+  0% {
+    background-position: 0 0, 0 0;
+  }
+  100% {
+    background-position: 100px 100px, 100px 100px;
+  }
+}
+
 .slide {
   position: absolute;
   width: 100%;
@@ -175,6 +200,8 @@ header {
   opacity: 0;
   transition: opacity 0.8s ease;
   z-index: 2;
+  padding: 0 10%;
+  box-sizing: border-box;
 }
 
 .slide.active {
@@ -183,8 +210,12 @@ header {
 
 .content {
   color: #fff;
-  text-align: center;
-  flex: 1;
+  text-align: left;
+  flex: 0 0 45%;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: flex-start;
 }
 
 .content h1 {
@@ -198,11 +229,11 @@ header {
 }
 
 .image {
-  flex: 1;
+  flex: 0 0 45%;
   display: flex;
   justify-content: center;
   align-items: center;
-  margin-top: 40px; /* ↓ ajusta a altura da imagem */
+  margin-top: 60px; /* ↓ empurra imagem mais pra baixo */
 }
 
 .image img {
@@ -229,6 +260,42 @@ header {
 
 .prev { left: 20px; }
 .next { right: 20px; }
+
+/* RESPONSIVO */
+@media (max-width: 768px) {
+  .slide {
+    flex-direction: column-reverse;
+    text-align: center;
+    padding: 0 5%;
+  }
+
+  .content {
+    flex: 0 0 auto;
+    align-items: center;
+    text-align: center;
+    margin-top: 20px;
+  }
+
+  .content h1 {
+    font-size: 2.2rem;
+  }
+
+  .content p {
+    font-size: 1.2rem;
+  }
+
+  .image {
+    flex: 0 0 auto;
+    margin-top: 20px;
+  }
+
+  .image img {
+    width: 80%;
+    max-width: 300px;
+  }
+}
+
+
 
 
 /* =============================================== */
@@ -312,6 +379,21 @@ header {
 /* PRODUTOS */
 /* =============================================== */
 
+.btn-ficha {
+  display: inline-block;
+  margin-top: 8px;
+  padding: 8px 16px;
+  background-color: orange;
+  color: #fff;
+  text-decoration: none;
+  border-radius: 8px;
+  font-weight: bold;
+  transition: background-color 0.3s ease;
+}
+
+.btn-ficha:hover {
+  background-color: #ff9900;
+}
 
 
 
