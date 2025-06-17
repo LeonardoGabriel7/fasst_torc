@@ -1,19 +1,20 @@
-const hamburger = document.querySelector('.hamburger');
-const navLinks = document.querySelector('.nav-links');
-const navItems = document.querySelectorAll('.nav-links a');
+const hamburger = document.querySelector('.header-hamburger');
+const navLinks = document.querySelector('.header-links');
+const navItems = document.querySelectorAll('.header-links a');
 
 hamburger.addEventListener('click', () => {
   navLinks.classList.toggle('active');
   hamburger.classList.toggle('active');
 });
 
-// Fechar menu ao clicar em um link
+// Fecha o menu ao clicar em um link (mobile)
 navItems.forEach(item => {
   item.addEventListener('click', () => {
     navLinks.classList.remove('active');
     hamburger.classList.remove('active');
   });
 });
+
 
 
 
