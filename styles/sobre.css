@@ -1,10 +1,20 @@
 /* GERAL - SOBRE */
 .sobre {
-  padding: 80px 20px;
+  padding: 60px 20px 80px;
   background: #000;
   color: #fff;
+  position: relative;
 }
 
+.sobre hr {
+  width: 60px;
+  height: 3px;
+  background-color: #F07D00;
+  border: none;
+  margin: 0 auto 20px;
+}
+
+/* Container ajustado para ocupar mais largura */
 .sobre .container {
   max-width: 1200px;
   margin: 0 auto;
@@ -12,17 +22,18 @@
   grid-template-columns: 1fr 1.2fr;
   gap: 40px;
   align-items: center;
+  padding: 0 10px;
 }
 
 .logo-box img {
   max-width: 100%;
-  height: 500PX;
+  height: 500px;
   border-radius: 12px;
   box-shadow: 0 5px 15px rgba(240, 125, 0, 0.4);
 }
 
 .descricao {
-  text-align: left; /* <<--- Alinha o texto à esquerda no desktop */
+  text-align: left;
 }
 
 .descricao h3 {
@@ -30,6 +41,7 @@
   color: #F07D00;
   margin-bottom: 15px;
   font-weight: 700;
+  margin-top: 0; /* Tira espaço extra */
 }
 
 .descricao .subtitle {
@@ -50,25 +62,55 @@
   color: #F07D00;
 }
 
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
+  .sobre {
+    padding: 50px 10px 70px;
+  }
+
   .sobre .container {
     grid-template-columns: 1fr;
     text-align: center;
-  }
-
-  .logo-box {
-    order: 1;
-  }
-
-  .descricao {
-    order: 2;
-    text-align: center; /* ← Volta pro centro no mobile */
     padding: 0 10px;
   }
 
-  .logo-box img {
-    max-width: 60%;
-    margin: 0 auto;
-    display: block;
+  .logo-box {
+    display: none; /* remove a imagem no mobile */
+  }
+
+  .descricao {
+    text-align: center;
+    padding: 0; /* remove padding lateral no texto */
+  }
+
+  .descricao h3 {
+    font-size: 1.8rem;
+    margin-top: 0;
+  }
+
+  .descricao .subtitle {
+    font-size: 1.1rem;
+  }
+
+  .descricao p {
+    font-size: 1rem;
+  }
+}
+
+@media (max-width: 480px) {
+  .descricao {
+    padding: 0;
+  }
+
+  .descricao h3 {
+    font-size: 1.6rem;
+  }
+
+  .descricao .subtitle {
+    font-size: 1rem;
+  }
+
+  .descricao p {
+    font-size: 0.95rem;
   }
 }

@@ -1,7 +1,11 @@
+/* =============================================== */
+/* SEÇÃO EMERGENCIAL */
+/* =============================================== */
+
 .emergencial-section {
   background: #000;
   color: #fff;
-  padding: 100px 20px; /* Aumentado de 80px para 100px */
+  padding: 100px 20px;
   animation: fadeInUp 1s ease both;
 }
 
@@ -9,10 +13,14 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  gap: 70px; /* Aumentado de 50px para 70px */
+  gap: 70px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
+}
+
+.emergencial-image {
+  display: block;
 }
 
 .emergencial-image img {
@@ -37,7 +45,7 @@
 
 .emergencial-header h2 {
   font-size: 2.5rem;
-  margin-bottom: 20px; /* Aumentado de 10px para 20px */
+  margin-bottom: 20px;
   font-weight: 700;
 }
 
@@ -48,7 +56,7 @@
 .emergencial-header p {
   font-size: 1.4rem;
   color: #fff;
-  margin-bottom: 30px; /* Aumentado de 20px para 30px */
+  margin-bottom: 30px;
   font-weight: 500;
 }
 
@@ -56,7 +64,7 @@
   font-size: 1.1rem;
   line-height: 1.6;
   color: #ccc;
-  margin-bottom: 30px; /* Aumentado de 20px para 30px */
+  margin-bottom: 30px;
   text-align: left;
 }
 
@@ -66,7 +74,7 @@
   gap: 10px;
   font-size: 1.5rem;
   color: #F07D00;
-  margin-bottom: 30px; /* Aumentado de 20px para 30px */
+  margin-bottom: 30px;
 }
 
 .btn-emergencia {
@@ -82,7 +90,7 @@
   font-size: 1.2rem;
   transition: all 0.3s ease;
   animation: pulse 2s infinite;
-  margin-top: 20px; /* Adicionado espaçamento superior */
+  margin-top: 20px;
 }
 
 .btn-emergencia:hover {
@@ -98,17 +106,33 @@
   transform: rotate(-10deg) scale(1.2);
 }
 
+
 /* Responsivo */
+
+
 @media (max-width: 768px) {
+  .emergencial-phone {
+    justify-content: center;
+  }
+}
+
+@media (max-width: 768px) {
+
+
   .emergencial-container {
     flex-direction: column;
     text-align: center;
-    gap: 40px; /* Aumentado espaçamento no mobile */
+    gap: 40px;
+  }
+
+  .emergencial-image {
+    display: none; /* Remove imagem no mobile */
   }
 
   .emergencial-content {
     max-width: 100%;
     text-align: center;
+    padding: 0 10px;
   }
 
   .emergencial-header,
@@ -120,11 +144,25 @@
 
   .btn-emergencia {
     justify-content: center;
-    margin-top: 30px; /* Maior espaçamento no mobile */
+    margin-top: 30px;
+  }
+}
+
+@media (max-width: 480px) {
+  .emergencial-header h2 {
+    font-size: 1.8rem;
   }
 
-  .emergencial-image img {
-    margin: 30px auto; /* Aumentado de 20px para 30px */
-    display: block;
+  .emergencial-header p {
+    font-size: 1.2rem;
+  }
+
+  .emergencial-content p {
+    font-size: 1rem;
+  }
+
+  .btn-emergencia {
+    font-size: 1rem;
+    padding: 12px 24px;
   }
 }

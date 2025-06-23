@@ -78,8 +78,8 @@
 }
 
 .mao-obra-image img {
-  width: 350px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 350px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(240, 125, 0, 0.3);
   transition: all 0.4s ease;
@@ -93,22 +93,61 @@
 
 /* RESPONSIVO */
 @media (max-width: 768px) {
+  .mao-obra {
+    padding: 60px 15px;
+  }
+
   .mao-obra-container {
     flex-direction: column;
     text-align: center;
+    gap: 30px;
   }
 
   .mao-obra-content {
     max-width: 100%;
     text-align: center;
+    padding: 0 10px;
+  }
+
+  .mao-obra-content h2 {
+    font-size: 2rem;
+  }
+
+  .mao-obra-content h3 {
+    font-size: 1.2rem;
+  }
+
+  .mao-obra-content p {
+    font-size: 1rem;
   }
 
   .btn-mao-obra {
     justify-content: center;
+    font-size: 1.1rem;
   }
 
   .mao-obra-image img {
-    margin: 20px auto;
+    margin: 0 auto;
     display: block;
+    max-width: 50%;
+  }
+}
+
+@media (max-width: 480px) {
+  .mao-obra {
+    padding: 50px 10px;
+  }
+
+  .mao-obra-content h2 {
+    font-size: 1.7rem;
+  }
+
+  .mao-obra-content h3 {
+    font-size: 1.1rem;
+  }
+
+  .btn-mao-obra {
+    font-size: 1rem;
+    padding: 12px 24px;
   }
 }
