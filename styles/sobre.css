@@ -1,0 +1,74 @@
+/* GERAL - SOBRE */
+.sobre {
+  padding: 80px 20px;
+  background: #000;
+  color: #fff;
+}
+
+.sobre .container {
+  max-width: 1200px;
+  margin: 0 auto;
+  display: grid;
+  grid-template-columns: 1fr 1.2fr;
+  gap: 40px;
+  align-items: center;
+}
+
+.logo-box img {
+  max-width: 100%;
+  height: 500PX;
+  border-radius: 12px;
+  box-shadow: 0 5px 15px rgba(240, 125, 0, 0.4);
+}
+
+.descricao {
+  text-align: left; /* <<--- Alinha o texto à esquerda no desktop */
+}
+
+.descricao h3 {
+  font-size: 2rem;
+  color: #F07D00;
+  margin-bottom: 15px;
+  font-weight: 700;
+}
+
+.descricao .subtitle {
+  font-size: 1.2rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  font-style: italic;
+}
+
+.descricao p {
+  font-size: 1.1rem;
+  line-height: 1.7;
+  margin-bottom: 18px;
+  color: #e0e0e0;
+}
+
+.descricao strong {
+  color: #F07D00;
+}
+
+@media (max-width: 768px) {
+  .sobre .container {
+    grid-template-columns: 1fr;
+    text-align: center;
+  }
+
+  .logo-box {
+    order: 1;
+  }
+
+  .descricao {
+    order: 2;
+    text-align: center; /* ← Volta pro centro no mobile */
+    padding: 0 10px;
+  }
+
+  .logo-box img {
+    max-width: 60%;
+    margin: 0 auto;
+    display: block;
+  }
+}

@@ -1,0 +1,56 @@
+/* =============================================== */
+/* SEÇÃO ONDE ESTAMOS / LOCALIZAÇÃO */
+/* =============================================== */
+
+.onde-estamos-section {
+  background: #000;
+  color: #fff;
+  padding: 80px 20px;
+  border-bottom: 3px solid #F07D00;
+  text-align: center;
+}
+
+.onde-estamos-header h2 {
+  font-size: 2.5rem;
+  color: #F07D00;
+  margin-bottom: 30px;
+}
+
+.onde-estamos-mapa iframe {
+  width: 100%;
+  max-width: 800px;
+  height: 450px;
+  border: 0;
+  border-radius: 10px;
+  box-shadow: 0 5px 15px rgba(240, 125, 0, 0.3);
+}
+
+/* Botão Como Chegar */
+.btn-como-chegar {
+  display: inline-block;
+  margin-top: 20px;
+  padding: 15px 30px;
+  background: #F07D00;
+  color: #fff;
+  border-radius: 50px;
+  text-decoration: none;
+  font-weight: bold;
+  font-size: 1.2rem;
+  transition: all 0.3s ease;
+}
+
+.btn-como-chegar:hover {
+  background: #ff8c00;
+  transform: scale(1.05);
+}
+
+/* Responsivo - Localização */
+@media (max-width: 768px) {
+  .onde-estamos-header h2 {
+    font-size: 2rem;
+  }
+
+  .onde-estamos-mapa iframe {
+    height: 300px;
+  }
+}
