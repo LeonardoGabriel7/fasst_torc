@@ -12,8 +12,8 @@
 .emergencial-container {
   display: flex;
   align-items: center;
-  justify-content: center;
-  gap: 70px;
+  justify-content: center; /* centraliza os itens */
+  gap: 30px; /* diminui o espaço entre imagem e texto */
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
@@ -40,7 +40,8 @@
 .emergencial-content {
   max-width: 600px;
   flex: 1;
-  text-align: left;
+  text-align: left; /* texto alinhado à esquerda */
+  padding-left: 15px; /* espaço menor entre imagem e texto */
 }
 
 .emergencial-header h2 {
@@ -65,7 +66,7 @@
   line-height: 1.6;
   color: #ccc;
   margin-bottom: 30px;
-  text-align: left;
+  text-align: left; /* parágrafos alinhados à esquerda */
 }
 
 .emergencial-phone {
@@ -106,19 +107,9 @@
   transform: rotate(-10deg) scale(1.2);
 }
 
-
 /* Responsivo */
 
-
 @media (max-width: 768px) {
-  .emergencial-phone {
-    justify-content: center;
-  }
-}
-
-@media (max-width: 768px) {
-
-
   .emergencial-container {
     flex-direction: column;
     text-align: center;
@@ -140,6 +131,10 @@
   .emergencial-header p,
   .emergencial-content p {
     text-align: center;
+  }
+
+  .emergencial-phone {
+    justify-content: center; /* Centraliza o telefone no mobile */
   }
 
   .btn-emergencia {
