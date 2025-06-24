@@ -12,22 +12,17 @@
 .header-container {
   max-width: 1200px;
   margin: 0 auto;
-  padding: 1rem 2rem;
+  padding: 0.4rem 2rem;
   display: flex;
   justify-content: space-between;
   align-items: center;
+  height: 90px;
 }
 
 /* === LOGO === */
-.header-logo {
-  display: flex;
-  align-items: center;
-  text-decoration: none;
-}
-
 .header-logo img {
-  height: 50px; /* Tamanho fixo e proporcional */
-  width: auto;
+  max-height: 100%;
+  width: 110px;
   display: block;
 }
 
@@ -88,7 +83,6 @@
   transition: 0.3s;
 }
 
-/* Animação ao abrir */
 .header-hamburger.active span:nth-child(1) {
   transform: rotate(45deg) translate(5px, 5px);
 }
@@ -108,7 +102,8 @@
   }
 
   .header-logo img {
-    height: 38px;
+    max-height: 50px; /* Não estica no mobile */
+    width: auto;
   }
 
   .header-links {
@@ -140,7 +135,8 @@
   }
 
   .header-logo img {
-    height: 34px;
+    max-height: 44px;
+    width: auto;
   }
 
   .header-links {
