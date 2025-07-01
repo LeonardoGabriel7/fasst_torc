@@ -1,11 +1,17 @@
-/* =============================================== */
-/* SEÇÃO MÃO DE OBRA */
-/* =============================================== */
+/* === LINHA LARANJA PADRÃO === */
+.hr-laranja {
+  width: 80px;
+  height: 3px;
+  background-color: #F07D00;
+  border: none;
+  margin: 20px auto;
+}
 
+/* === SEÇÃO MÃO DE OBRA === */
 .mao-obra {
   background: #000;
   color: #fff;
-  padding: 80px 20px;
+  padding: 60px 20px 60px;
   animation: fadeInUp 1s ease both;
 }
 
@@ -26,8 +32,8 @@
 }
 
 .mao-obra-content h2 {
-  font-size: 2.5rem;
-  margin-bottom: 10px;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
@@ -36,17 +42,18 @@
 }
 
 .mao-obra-content h3 {
-  font-size: 1.4rem;
-  color: #fff;
+  font-size: 1.3rem;
+  color: #ff8c00;
   margin-bottom: 20px;
-  font-weight: 500;
+  font-style: italic;
 }
 
 .mao-obra-content p {
   font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ccc;
+  line-height: 1.8;
+  color: #e0e0e0;
   margin-bottom: 30px;
+  text-align: justify;
 }
 
 .btn-mao-obra {
@@ -91,10 +98,10 @@
   box-shadow: 0 8px 20px rgba(240, 125, 0, 0.4);
 }
 
-/* RESPONSIVO */
+/* === RESPONSIVO === */
 @media (max-width: 768px) {
   .mao-obra {
-    padding: 60px 15px;
+    padding: 50px 15px;
   }
 
   .mao-obra-container {
@@ -114,11 +121,12 @@
   }
 
   .mao-obra-content h3 {
-    font-size: 1.2rem;
+    font-size: 1.15rem;
   }
 
   .mao-obra-content p {
-    font-size: 1rem;
+    font-size: 1.05rem;
+    text-align: justify;
   }
 
   .btn-mao-obra {
@@ -129,21 +137,17 @@
   .mao-obra-image img {
     margin: 0 auto;
     display: block;
-    max-width: 50%;
+    max-width: 70%;
   }
 }
 
 @media (max-width: 480px) {
-  .mao-obra {
-    padding: 50px 10px;
-  }
-
   .mao-obra-content h2 {
-    font-size: 1.7rem;
+    font-size: 1.8rem;
   }
 
   .mao-obra-content h3 {
-    font-size: 1.1rem;
+    font-size: 1.05rem;
   }
 
   .btn-mao-obra {

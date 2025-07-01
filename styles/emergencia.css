@@ -1,31 +1,33 @@
-/* =============================================== */
-/* SEÇÃO EMERGENCIAL */
-/* =============================================== */
+/* === LINHA LARANJA PADRÃO === */
+.hr-laranja {
+  width: 80px;
+  height: 3px;
+  background-color: #F07D00;
+  border: none;
+  margin: 20px auto;
+}
 
+/* === SEÇÃO EMERGENCIAL PADRONIZADA === */
 .emergencial-section {
   background: #000;
   color: #fff;
-  padding: 100px 20px;
+  padding: 60px 20px;
   animation: fadeInUp 1s ease both;
 }
 
 .emergencial-container {
   display: flex;
   align-items: center;
-  justify-content: center; /* centraliza os itens */
-  gap: 30px; /* diminui o espaço entre imagem e texto */
+  justify-content: center;
+  gap: 40px;
   max-width: 1200px;
   margin: 0 auto;
   flex-wrap: wrap;
 }
 
-.emergencial-image {
-  display: block;
-}
-
 .emergencial-image img {
-  width: 350px;
-  max-width: 100%;
+  width: 100%;
+  max-width: 350px;
   border-radius: 10px;
   box-shadow: 0 5px 15px rgba(240, 125, 0, 0.3);
   transition: all 0.4s ease;
@@ -40,13 +42,13 @@
 .emergencial-content {
   max-width: 600px;
   flex: 1;
-  text-align: left; /* texto alinhado à esquerda */
-  padding-left: 15px; /* espaço menor entre imagem e texto */
+  padding-left: 15px;
+  text-align: left;
 }
 
 .emergencial-header h2 {
-  font-size: 2.5rem;
-  margin-bottom: 20px;
+  font-size: 2.4rem;
+  margin-bottom: 15px;
   font-weight: 700;
 }
 
@@ -55,18 +57,18 @@
 }
 
 .emergencial-header p {
-  font-size: 1.4rem;
-  color: #fff;
-  margin-bottom: 30px;
-  font-weight: 500;
+  font-size: 1.3rem;
+  color: #ff8c00;
+  margin-bottom: 20px;
+  font-style: italic;
 }
 
 .emergencial-content p {
   font-size: 1.1rem;
-  line-height: 1.6;
-  color: #ccc;
-  margin-bottom: 30px;
-  text-align: left; /* parágrafos alinhados à esquerda */
+  line-height: 1.8;
+  margin-bottom: 20px;
+  color: #e0e0e0;
+  text-align: justify;
 }
 
 .emergencial-phone {
@@ -91,7 +93,7 @@
   font-size: 1.2rem;
   transition: all 0.3s ease;
   animation: pulse 2s infinite;
-  margin-top: 20px;
+  margin-top: 10px;
 }
 
 .btn-emergencia:hover {
@@ -107,39 +109,43 @@
   transform: rotate(-10deg) scale(1.2);
 }
 
-/* Responsivo */
-
+/* RESPONSIVO */
 @media (max-width: 768px) {
   .emergencial-container {
     flex-direction: column;
     text-align: center;
-    gap: 40px;
+    gap: 30px;
   }
 
   .emergencial-image {
-    display: none; /* Remove imagem no mobile */
+    display: none;
   }
 
   .emergencial-content {
-    max-width: 100%;
-    text-align: center;
     padding: 0 10px;
+    text-align: center;
   }
 
-  .emergencial-header,
-  .emergencial-header h2,
-  .emergencial-header p,
+  .emergencial-header h2 {
+    font-size: 2rem;
+  }
+
+  .emergencial-header p {
+    font-size: 1.15rem;
+  }
+
   .emergencial-content p {
-    text-align: center;
+    font-size: 1.05rem;
+    text-align: justify;
   }
 
   .emergencial-phone {
-    justify-content: center; /* Centraliza o telefone no mobile */
+    justify-content: center;
   }
 
   .btn-emergencia {
     justify-content: center;
-    margin-top: 30px;
+    font-size: 1.1rem;
   }
 }
 
@@ -149,7 +155,7 @@
   }
 
   .emergencial-header p {
-    font-size: 1.2rem;
+    font-size: 1.05rem;
   }
 
   .emergencial-content p {
