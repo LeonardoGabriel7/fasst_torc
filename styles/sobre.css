@@ -6,13 +6,7 @@
   position: relative;
 }
 
-.hr-laranja {
-  width: 60px;
-  height: 3px;
-  background-color: #F07D00;
-  border: none;
-  margin: 0 auto 30px; /* CENTRALIZA */
-}
+
 
 .sobre .container {
   max-width: 1200px;

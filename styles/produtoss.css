@@ -38,9 +38,7 @@
       margin-bottom: 30px;
     }
 
-    .hr-laranja {
-    background-color: #F07D00;
-    }
+    
 
     .maquinas {
       display: flex;
@@ -129,9 +127,7 @@
   margin-bottom: 40px;
 }
 
-.hr-laranja {
-  background-color: orange;
-}
+
 
 .maquinas {
   display: flex;
